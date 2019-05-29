@@ -40,7 +40,8 @@ pipeline {
             steps {
                    sh "scp docker.yml root@192.168.1.101:/etc/ansible/"
                  sh 'ssh root@192.168.1.101 "ansible-playbook /etc/ansible/docker.yml"'
-
+                   sh "scp Dockerfile root@192.168.1.101:/etc/ansible/"
+                 
                 //
             }
        }
