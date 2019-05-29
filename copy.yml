@@ -1,0 +1,8 @@
+---
+#This is my first playbook
+
+ - hosts: webserver
+   tasks:
+    - copy:
+       src: /docker/Dockerfile
+       dest: /docker/

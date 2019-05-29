@@ -41,8 +41,9 @@ pipeline {
                    sh "scp docker.yml root@192.168.1.101:/etc/ansible/"
                  sh 'ssh root@192.168.1.101 "ansible-playbook /etc/ansible/docker.yml"'
                    sh "scp Dockerfile root@192.168.1.101:/docker"
-                   sh "scp docker1.yml root@192.168.1.101:/etc/ansible/"
-                 sh 'ssh root@192.168.1.101 "ansible-playbook /etc/ansible/docker1.yml"'
+                   sh "scp copy.yml root@192.168.1.101:/etc/ansible"
+                sh 'ssh root@192.168.1.101 "ansible-playbook /etc/ansible/copy.yml"'           sh "scp docker1.yml root@192.168.1.101:/etc/ansible/"
+               sh 'ssh root@192.168.1.101 "ansible-playbook /etc/ansible/docker1.yml"'
                    
                  
                 //
