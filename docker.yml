@@ -1,0 +1,20 @@
+---
+
+#this is my first playbook
+
+ - hosts: webserver
+   tasks:
+   - name: install latest docker
+     yum:
+      name: docker
+      state: latest
+
+   - name: service started
+     service:
+      name: docker
+      state: started
+
+
+
+
+
