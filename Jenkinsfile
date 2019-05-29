@@ -7,7 +7,7 @@ pipeline {
         stage('SCM') {
 
             steps {
-                    git "https://github.com/jadhavrachana/ansible-pipe.git"
+                    git "https://github.com/jadhavrachana/docker-pipe.git"
                 //
             }
         }
