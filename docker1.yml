@@ -5,7 +5,7 @@
  - hosts: webserver
    tasks:
     - name: Install pip
-       apt: name=python-pip 
+       yum: name=python-pip 
        state=present
       
     - name: install docker-py
