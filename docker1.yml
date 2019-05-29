@@ -5,21 +5,21 @@
  - hosts: webserver
    tasks:
     - name: Install pip
-       yum: 
-        name: python-pip 
-        state: present
+      yum: 
+       name: python-pip 
+       state: present
       
     - name: install docker-py
-       pip: 
-        name: docker-py
+      pip: 
+       name: docker-py
 
     - name: Build Docker image from Dockerfile
-       docker_image:
-         name: web
-         state: build
+      docker_image:
+       name: web
+       state: build
         
     - name: Running the container
-       docker_container:
-         image: web:latest
-         state: running
+      docker_container:
+       image: web:latest
+       state: running
 
