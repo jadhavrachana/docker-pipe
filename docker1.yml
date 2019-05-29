@@ -16,7 +16,7 @@
     - name: Build Docker image from Dockerfile
       docker_image:
        name: web
-       path: /etc/ansible/Dockerfile 
+       path: docker
        state: build
         
     - name: Running the container
