@@ -23,5 +23,5 @@
       docker_container:
        name: web_container
        image: web:latest
-       state: started
+       state: present
 
